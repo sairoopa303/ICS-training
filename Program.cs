@@ -1,24 +1,17 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-public class Program3
+class program5
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
-        int A, B;
-        char operation;
-        Console.Write("Inout first number: ");
-        A = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Inout operation: ");
-        operation = Convert.ToChar(Console.ReadLine());
-        Console.Write("Inout second number: ");
-        B = Convert.ToInt32(Console.ReadLine());
-        if (operation == '+')
-            Console.WriteLine("{0} + {1} = {2}", A, B, A + B);
-        else
-            Console.Write("Wrong Character");
+        double fahrenheit;
+        double celsius = 6;
+        Console.WriteLine("Celsius: " + celsius);
+        fahrenheit = (celsius * 9) / 5 + 32;
+        Console.WriteLine("Fahrenheit: " + fahrenheit);
         Console.ReadLine();
     }
 }
