@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-class program31
+
+class programassig2
 {
     public static void Main(string[] args)
     {
-        string str;
-        int l = 0;
+        string str = "", reverse = "";
+        int Length = 0;
 
-        Console.Write("\n\n find length of a string \n");
-
-        Console.Write("enter input string: ");
+        Console.WriteLine("Enter a word: ");
         str = Console.ReadLine();
-        foreach (char chr in str)
+        Length = str.Length - 1;
+        while (Length >= 0)
         {
-            l += 1;
+            reverse = reverse + str[Length];
+            Length--;
         }
-        Console.Write("length of string is {0}\n\n", l);
+        Console.WriteLine("reverse of word is {0}", reverse);
         Console.ReadLine();
     }
 }
