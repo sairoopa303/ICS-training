@@ -3,75 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System;
 
-namespace Assign3_2_
+class Programassign2
 {
-    class Student
+    public static void Main(string[] args)
     {
-        int rollNum;
-        string name;
-        string year;
-        string branch;
-        string sem;
-        int[] mark = new int[5];
-        int Total;
-        int avg;
-        string result;
-        int Count = 0;
-
-        public Student(int rollNum, string name, string year, string branch, string sem)
+        string s, revs = "";
+        Console.WriteLine(" Enter the string: ");
+        s = Console.ReadLine();
+        for (int i = s.Length - 1; i >= 0; i--)
         {
-            this.rollNum = rollNum;
-            this.name = name;
-            this.year = year;
-            this.branch = branch;
-            this.sem = sem;
-
+            revs += s[i].ToString();
         }
-        public void Getmarks()
+        if (revs == s)
         {
-            Console.WriteLine("Enter the marks");
-            for (int i = 0; i < mark.Length; i++)
-            {
-                Console.WriteLine("enter the marks for subject:{0} ", i + 1);
-                mark[i] = Convert.ToInt32(Console.ReadLine());
-                if (mark[i] < 35)
-                {
-                    Count++;
-                }
-
-                Total = mark[i] + Total;
-            }
-            Console.WriteLine("Total of given marks : " + Total);
+            Console.WriteLine("the string is Palindrome", s, revs);
         }
-        public void DisplayResult()
+        else
         {
-            avg = Total / mark.Length;
-
-            if (Count > 0 && avg < 50)
-            {
-                result = "Fail";
-            }
-            else
-            {
-                result = "Pass";
-            }
-
-
+            Console.WriteLine("the string is not Palindrome", s, revs);
         }
-
-        public void DisplayData()
-        {
-            Console.WriteLine("************student details*************");
-            Console.WriteLine("Roll Number: " + rollNum);
-            Console.WriteLine("Student Name: " + name);
-            Console.WriteLine("Year of Studying: " + year);
-            Console.WriteLine("Branch: " + branch);
-            Console.WriteLine("Semester: " + sem);
-            Console.WriteLine("Result is: " + result);
-            Console.ReadLine();
-        }
-
+        Console.ReadLine();
     }
 }
 
